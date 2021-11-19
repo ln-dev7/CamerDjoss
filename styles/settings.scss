@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Poppins:wght@300;500;600;700&family=Grey+Qo&family=Parisienne&family=Roboto:wght@300;400&family=Ubuntu:wght@400;500;700&display=swap');
+
+$indigo: #5603ad;
+$purple: #8965e0;
+$pink: #f3a4b5;
+$yellow: #ffd600;
+$cyan: #2bffc6;
+$gray: #8898aa;
+$gray-dark: #1b1e3d;
+$light: #ced4da;
+$lighter: #e9ecef;
+$primary: #5e72e4;
+$secondary: #f4f5f7;
+$success: #2dce89;
+$info: #11cdef;
+$warning: #fb6340;
+$danger: #f5365c;
+$lighter: #adb5bd;
+$dark: #212529;
+$default: #172b4d;
+$white: #fff;
+$gray-white: #f4f5f7;
+$darker: black;
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    font-family: 'Poppins', san-serif;
+    color: $gray;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+ 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: $white;
+    transition: background-color .3s ease;
+}
+
+body.active{
+    background-color: $dark;
+}
+
