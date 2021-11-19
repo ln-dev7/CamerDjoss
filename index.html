@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CamerDjoss | Acceuil</title>
     <link rel="icon" sizes="76x76" href="logo/icon.png">
+    <link rel="stylesheet" href="styles/splide.min.css">
     <link rel="stylesheet" href="index.css">
     <script src="scripts/app.js" defer></script>
     <script src="scripts/loader.js" defer></script>
+    <script src="scripts/splide.min.js"></script>
 </head>
 <body>
     <div class="loader"> 
@@ -57,33 +59,43 @@
             </div>
         </nav>
         <section class="section" id="section">
-            <div class="section-story">
-                <div class="section-story-card personal">
-                    <img src="images/status-0.png" alt="status-0">
-                    <img src="images/upload.png" alt="upload">
-                    <span>Ajoute une story</span>
-                </div>
-                <div class="section-stories-card">
-                    <img src="images/status-2.png" alt="status-2">
-                    <img src="images/member-1.png" alt="member-1">
-                    <span>Ornella</span>
-                </div>
-                <div class="section-story-card">
-                    <img src="images/status-3.png" alt="status-3">
-                    <img src="images/member-2.png" alt="member-2">
-                    <span>Arlane</span>
-                </div>
-                <div class="section-story-card">
-                    <img src="images/status-4.png" alt="status-4">
-                    <img src="images/member-3.png" alt="member-3">
-                    <span>Carole</span>
-                </div>
-                <div class="section-story-card">
-                    <img src="images/status-5.png" alt="status-5">
-                    <img src="images/member-4.png" alt="member-4">
-                    <span>Yannick</span>
+            <div class="splide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="section-story-card splide__slide">
+                            <img src="images/status-0.png" class="status" alt="status-0">
+                            <img src="images/upload.png" class="status-upload" alt="upload">
+                            <span>Ajoute une story</span>
+                        </div>
+                        <div class="section-story-card splide__slide">
+                            <a href="images/status-2.png"><img src="images/status-2.png" class="status" alt="status-2"></a>
+                            <img src="images/member-1.png" class="status-profile" alt="member-1">
+                            <span>Miranda</span>
+                        </div>
+                        <div class="section-story-card splide__slide">
+                            <a href="images/status-3.png"><img src="images/status-3.png" class="status" alt="status-3"></a>
+                            <img src="images/member-2.png" class="status-profile" alt="member-2">
+                            <span>Larson</span>
+                        </div>
+                        <div class="section-story-card splide__slide">
+                            <a href="images/status-4.png"><img src="images/status-4.png" class="status" alt="status-4"></a>
+                            <img src="images/member-3.png" class="status-profile" alt="member-3">
+                            <span>Franca</span>
+                        </div>
+                        <div class="section-story-card splide__slide">
+                            <a href="images/status-5.png"><img src="images/status-5.png" class="status" alt="status-5"></a>
+                            <img src="images/member-4.png" class="status-profile" alt="member-4">
+                            <span>Xavier</span>
+                        </div>
+                        <div class="section-story-card splide__slide">
+                            <a href="images/status-1.png"><img src="images/status-1.png" class="status" alt="status-1"></a>
+                            <img src="images/member-10.png" class="status-profile" alt="member-10">
+                            <span>Leon</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div class="section-newpost">
 
             </div>
@@ -94,5 +106,14 @@
         <asside class="asside" id="asside">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur unde atque deleniti tempora quod aperiam eum similique dolorum esse saepe minima deserunt, nulla quia, obcaecati libero lestias alias quo ullam, saepe dolores. Nisi distinctio ducimus, recusandae magni eos temporibus cumque laborum ipsum, perspiciatis commodi, excepturi sed?
         </asside>
+
+        <script>
+            var splide = new Splide('.splide', {
+                type: 'loop',
+                perPage: 5,
+                perMove: 1,
+            });
+            splide.mount();
+        </script>
     </div>
 </body>
