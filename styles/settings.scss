@@ -34,3 +34,8 @@ body{
     background-color: $white;
     transition: background-color .3s ease;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+}
