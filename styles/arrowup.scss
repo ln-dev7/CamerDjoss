@@ -1,0 +1,26 @@
+.arrow{
+    position: fixed;
+    display: none;
+    bottom: 20px;
+    right: 15px;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $blue;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 10px rgba($blue, $alpha: 0.5);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    ion-icon{
+        color: #fff;
+    }
+}
+
+.arrow.arrow-hidde{
+    transition: opacity .5s;
+    display: flex!important;
+    opacity: 1!important;
+}
