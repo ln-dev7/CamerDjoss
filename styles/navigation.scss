@@ -69,3 +69,36 @@
         }
     }
 }
+
+.navigation.phone{
+    display: none;
+}
+
+@media screen and (max-width: 1080px) {
+    .navigation{
+        display: none;
+    }
+    .navigation.phone{
+        position: static;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        &-shortcuts{
+            margin: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .navigation.phone{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .navigation.phone{
+        width: 100%;
+    }
+}

@@ -10,3 +10,22 @@
     border-radius: 10px;
     height: max-content;
 }
+
+@media screen and (max-width: 1080px) {
+    .asside{
+        position: static;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .asside{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .asside{
+        width: 100%;
+    }
+}

@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     &-container{
         display: flex;
         justify-content: center;
@@ -107,5 +106,20 @@
             border: 1px solid #fff;
             border-radius: 50%;
         }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .header-search{
+        display: none;
     }
 }

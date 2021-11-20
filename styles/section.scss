@@ -137,7 +137,7 @@
             div{
                 display: flex;
                 justify-content: left;
-                align-items: center;
+                //align-items: center;
                 width: 100%;
                 li{
                     display: flex;
@@ -292,5 +292,58 @@
                 } 
             }
         }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .section{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .section{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .section-story-card{
+        min-width: min-content;
+        min-height: min-content;
+        margin: 0.2rem;
+        .status-profile{
+            width: 40px;
+            height: 40px;
+        }
+        .status-upload{
+            width: 30px;
+            height: 30px;
+        }
+        span{
+            font-size: 0.7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .section{
+        width: 100%;
+        &-newpost{
+            margin: 0.5rem;
+        }
+        &-posts{
+            margin: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .section .section-newpost .section-newpost-footer div{
+            display: flex;
+            flex-direction: column;
+            li{
+                padding: 0.5rem;
+            }
     }
 }
