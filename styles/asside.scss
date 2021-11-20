@@ -3,12 +3,178 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    left: 0;
     width: 20%;
     padding: 1rem;
     margin-top: 1rem;
-    border-radius: 10px;
+    border-radius: 5px;
     height: max-content;
+    &-advertisement{
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            h2{
+                font-weight: 500;
+                font-size: 15px;
+                color: #686868;
+            }
+            span{
+                font-weight: 500;
+                font-size: 13px;
+                color: $blue;
+            }
+        }
+        &-body{
+            img{
+                border-radius: 5px;
+            }
+        }
+    }
+    &-conversation{
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            h2{
+                font-weight: 500;
+                font-size: 15px;
+                color: #686868;
+            }
+            span{
+                font-weight: 500;
+                font-size: 13px;
+                color: $blue;
+            }
+        }
+        &-body{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            border-radius: 10px;
+            padding-left: 5px;
+            transition: box-shadow .3s ease-in-out;
+            img{
+                margin: 1rem 0.5rem 1rem 0rem;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            span{
+                font-size: 14px;
+                color: #686868;
+                &:hover{
+                    cursor: pointer;
+                    color: #000;
+                }
+            }
+            &:hover{
+                box-shadow: 1px 1px 3px #00000059;
+                cursor: pointer;
+            }
+        }
+    }
+    &-events{
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                font-weight: 500;
+                font-size: 15px;
+                color: #686868;
+            }
+            span{
+                font-weight: 500;
+                font-size: 13px;
+                color: $blue;
+            }
+        }
+        &-body{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            div:first-child{
+                position: relative;
+                border: 1px solid $white;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 25px;
+                color: #686868;
+                width: 75px;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                padding-top: 10px;
+                outline: none;
+                overflow: hidden;
+                &::before{
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    bottom: 0;
+                    content: 'Mai';
+                    height: 25px;
+                    width: 100%;
+                    font-size: 13px;
+                    background: $blue;
+                    color: #fff;
+                    transition: height .3s ease-in-out;
+                }
+                &:hover::before{
+                    content: '20 Mai';
+                    font-size: 15px;
+                    height: 100%;
+                    cursor: pointer;
+                }
+            }
+            div:last-child{
+                margin: 1rem;
+                h2{
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #686868;
+                }
+                :nth-child(2){
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    font-weight: 500;
+                    font-size: 14px;
+                    opacity: .7;
+                    color: #686868;
+                    img{
+                        width: 10px;
+                        height: 15px;
+                        margin-right: 0.3rem;
+                    }
+                }
+                :last-child{
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: $blue;
+                }
+            }
+            &:nth-child(4){
+                div:first-child{
+                    &::before{
+                        content: 'Février';
+                    }
+                    &:hover::before{
+                        content: '11 Février';
+                        font-size: 15px;
+                        height: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1080px) {
