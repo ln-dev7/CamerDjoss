@@ -1,0 +1,111 @@
+.profile{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 1px 1px 3px #00000059;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-infos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-img{
+            border-radius: 4px;
+        }
+        &-info{
+            height: 120px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            h2{
+                text-align: center;
+                font-weight: 500;
+                font-size: 1.5rem;
+                color: #686868;
+                margin-left: 1rem;
+                transition: color .3s ease-in-out;
+                &:hover{
+                    color: #000;
+                    cursor: pointer;
+                }
+            }
+            h3{
+                text-align: center;
+                font-weight: 500;
+                font-size: 13px;
+                color: #686868;
+                margin-left: 1rem;
+                transition: color .3s ease-in-out;
+                &:hover{
+                    color: #000;
+                    cursor: pointer;
+                }
+            }
+            &-friends{
+                margin-left: 1rem;
+                img{
+                    border: 2px solid #fff;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                }
+                :nth-child(2){
+                    transform: translateX(-10px);
+                }
+                :nth-child(3){
+                    transform: translateX(-20px);
+                }
+                :nth-child(4){
+                    transform: translateX(-30px);
+                }
+            }
+        }
+    }
+    &-options{
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        &-new{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0.4rem;
+                margin: 0.5rem;
+                border-radius: 4px;
+                font-weight: 500;
+                cursor: pointer;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+                &:hover{
+                    opacity: .7;
+                }
+            }
+            div:first-child{
+                background: rgba($color: $gray, $alpha: .7); 
+            }
+            div:last-child{
+                background: $blue;  
+                color: #fff;
+            }
+        }
+        &-more{
+            background: rgba($color: $gray, $alpha: .7);
+            border-radius: 4px;
+            padding: 1rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

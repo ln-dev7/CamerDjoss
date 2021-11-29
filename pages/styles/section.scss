@@ -1,0 +1,279 @@
+.section{
+    width: 50%;
+    height: max-content;
+    margin: 1rem;
+    hr{
+        margin: 0.5rem 0.7rem 1rem 0.7rem;
+        opacity: 0.4;
+    }
+    &-newpost{
+        background: #fff;
+        border-radius: 10px;
+        margin: 1rem 0rem;
+        padding: 1.2rem;
+        box-shadow: 1px 1px 3px #00000059;
+        outline: none;
+        overflow: hidden;
+        &-header{
+            position: relative;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            .lenght{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: $blue;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: left;
+                flex-direction: column;
+                h2{
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #686868;
+                    margin-left: 0.7rem;
+                    transition: color .3s ease-in-out;
+                    &:hover{
+                        color: #000;
+                        cursor: pointer;
+                    }
+                }
+                span{
+                    position: relative;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: #686868;
+                    margin-left: 0.7rem
+                }
+                span::after{
+                    position: absolute;
+                    cursor: pointer;
+                    top: 40%;
+                    content: '';
+                    margin-left: 2px;
+                    width: 8px;
+                    height: 8px;
+                    border: 5px solid #fff;
+                    border-top-color: #686868;
+                }
+            }
+        }
+        &-footer{
+            margin: 1rem 0rem 0rem 3rem;
+            textarea {
+                width: 100%;
+                resize: none;
+                border: none;
+                outline: none;
+                padding-right: 0.7rem;
+                margin-left: 0.7rem;
+            } 
+            div{
+                display: flex;
+                justify-content: left;
+                //align-items: center;
+                width: 100%;
+                li{
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    margin-left: 0.7rem;
+                    :not(:first-child){
+                        padding-right: 2rem;
+                    }
+                    cursor: pointer;
+                    img{
+                        width: 20px;
+                        height: 17.5px;
+                    }
+                    span{
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #7e7e7e;
+                        padding-left: 0.5rem;
+                        transition: color .3s ease-in-out;
+                    }
+                }
+                li:first-child:hover span{
+                    color: red;
+                }
+                li:nth-child(2):hover span{
+                    color: green;
+                }
+                li:last-child:hover span{
+                    color: orange;
+                }
+            }             
+        }
+    }
+    &-posts{
+        &-card{
+            background: #fff;
+            border-radius: 10px;
+            margin: 1rem 0rem;
+            padding: 1.2rem;
+            box-shadow: 1px 1px 3px #00000059;
+            outline: none;
+            overflow: hidden;
+            &-header{
+                position: relative;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                .profile-post{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: left;
+                    flex-direction: column;
+                    h2{
+                        font-weight: 500;
+                        font-size: 15px;
+                        color: #686868;
+                        margin-left: 0.7rem;
+                        transition: color .3s ease-in-out;
+                        &:hover{
+                            color: #000;
+                            cursor: pointer;
+                        }
+                    }
+                    span{
+                        position: relative;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: #686868;
+                        margin-left: 0.7rem
+                    }
+                }
+                .more-post{
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    height: 4px;
+                    transform: rotate(90deg);
+                }
+            }
+            &-body{
+                color: #686868;
+                padding: 1rem 0rem;
+                a{
+                    color: $black;
+                    font-weight: bold;
+                }
+                span{
+                    color: $blue;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+            &-img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    border-radius: 10px;
+                }
+            }
+            &-footer{
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    li{
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        padding-right: 2rem;
+                        margin-top: 1rem;
+                        cursor: pointer;
+                        .liked-post{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            transition: .5s;
+                            :nth-child(2){
+                                display: none;
+                            }
+                            &.active :nth-child(1){
+                                display: none;
+                            }
+                            &.active :nth-child(2){
+                                display: block;
+                                padding-left: 0;
+                                width: auto;
+                            }
+                        }
+                        img{
+                            width: 20px;
+                            height: 17.5px;
+                        }
+                        span{
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: #7e7e7e;
+                            transition: color .3s ease-in-out;
+                        }
+                        :nth-child(2){   
+                            padding-left: 0.5rem;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .section{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .section{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .section{
+        width: 100%;
+        &-newpost{
+            margin: 0.5rem;
+        }
+        &-posts{
+            margin: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .section .section-newpost .section-newpost-footer div{
+            display: flex;
+            flex-direction: column;
+            li{
+                padding: 0.5rem;
+            }
+    }
+}

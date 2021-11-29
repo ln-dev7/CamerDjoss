@@ -112,6 +112,7 @@
                 padding-top: 10px;
                 outline: none;
                 overflow: hidden;
+                text-align: center;
                 &::before{
                     position: absolute;
                     display: flex;
@@ -158,6 +159,19 @@
                     font-weight: 500;
                     font-size: 13px;
                     color: $blue;
+                }
+            }
+            &:nth-child(3){
+                div:first-child{
+                    &::before{
+                        content: 'Mai';
+                    }
+                    &:hover::before{
+                        content: '1 Mai';
+                        font-size: 15px;
+                        height: 100%;
+                        cursor: pointer;
+                    }
                 }
             }
             &:nth-child(4){
