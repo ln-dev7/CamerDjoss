@@ -1,16 +1,16 @@
 .section{
-    width: 50%;
+    width: 60%;
     height: max-content;
-    margin: 1rem;
+    margin: 0.5rem 0 0.5rem 0.5rem;
     hr{
         margin: 0.5rem 0.7rem 1rem 0.7rem;
         opacity: 0.4;
     }
     &-newpost{
         background: #fff;
-        border-radius: 10px;
         margin: 1rem 0rem;
         padding: 1.2rem;
+        border-radius: 10px;
         box-shadow: 1px 1px 3px #00000059;
         outline: none;
         overflow: hidden;
@@ -244,36 +244,8 @@
     }
 }
 
-@media screen and (max-width: 1080px) {
-    .section{
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1030px) {
     .section{
         width: 90%;
-    }
-}
-
-@media screen and (max-width: 610px) {
-    .section{
-        width: 100%;
-        &-newpost{
-            margin: 0.5rem;
-        }
-        &-posts{
-            margin: 0.5rem;
-        }
-    }
-}
-
-@media screen and (max-width: 515px) {
-    .section .section-newpost .section-newpost-footer div{
-            display: flex;
-            flex-direction: column;
-            li{
-                padding: 0.5rem;
-            }
     }
 }

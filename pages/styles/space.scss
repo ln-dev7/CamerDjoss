@@ -1,5 +1,14 @@
 .space{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 1030px) {
+    .space{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
 }
